@@ -1,0 +1,555 @@
+.modal-shopping-cart {
+  display: none;
+  .wrapper-shopping-cart {
+    height: 100vh;
+    overflow: scroll;
+    background-color: #fff;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    width: 600px;
+    padding: 50px 70px;
+    .shopping-cart_header {
+      display: flex;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 20px;
+      border-bottom: 0.5px solid rgb(0, 0, 0);
+      .shopping-cart__title {
+        @include fontDesigner(rgb(41, 69, 100), 'Oswald', 24px, 400, auto, 2px);
+        text-align: center;
+        text-transform: uppercase;
+        margin: 0;
+      }
+      .shopping-cart_close {
+        position: absolute;
+        cursor: pointer;
+        right: -45px;
+        width: 45px;
+        height: 45px;
+        border: none;
+        background-color: transparent;
+        background-image: url(../img/fqaPage/cartDelete.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+    .wrapper-list-buy {
+      .list-buy {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        list-style-type: none;
+        padding: 50px 0 50px 0;
+        margin: 0;
+        border-bottom: 0.5px solid rgb(0, 0, 0);
+        .list-buy_item {
+          .wpapper-item {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            .item {
+              display: flex;
+              align-items: center;
+              // margin-bottom: 40px;
+              .item_img {
+                width: 80px;
+                height: 80px;
+                // background-image: url(../img/catalogPage/catalog-menu/chair1.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center left;
+              }
+              .item_header {
+                .item_title {
+                  @include fontDesigner(
+                    rgb(0, 0, 0),
+                    'Oswald',
+                    20px,
+                    400,
+                    0,
+                    0
+                  );
+                }
+                .item_desc {
+                  display: flex;
+                  align-items: center;
+                  @include fontDesigner(
+                    rgb(0, 0, 0),
+                    'Oswald',
+                    16px,
+                    200,
+                    0,
+                    0
+                  );
+                  .item_desc__color {
+                    margin-left: 5px;
+                    display: block;
+                    width: 18px;
+                    height: 18px;
+                    border-radius: 50%;
+                    border: 0.5px solid rgb(0, 0, 0);
+                    background: rgb(255, 255, 255);
+                  }
+                  .item_desc_size {
+                    margin-left: 5px;
+                    font-weight: 300;
+                  }
+                }
+              }
+            }
+            .item_delete {
+              cursor: pointer;
+              position: absolute;
+              right: 0;
+              width: 25px;
+              height: 25px;
+              border: 0.5px solid rgb(0, 0, 0);
+              background-color: transparent;
+              background-image: url(../img/fqaPage/cartDelete.svg);
+              background-size: 20px;
+              background-repeat: no-repeat;
+              background-position: center;
+              padding: 0;
+            }
+            .control-buttons {
+              gap: 14px;
+              display: flex;
+              .сontrol-button {
+                display: flex;
+                height: 20px;
+                border: none;
+                padding: 0;
+                background-color: transparent;
+                @include fontDesigner(
+                  rgb(0, 0, 0),
+                  'Oswald',
+                  24px,
+                  200,
+                  15px,
+                  0
+                );
+              }
+              .control-buttons__price {
+                position: absolute;
+                right: 0;
+              }
+              .control-buttons__minus,
+              .control-buttons__plus {
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+    }
+    .shopping-cart_price {
+      margin: 0;
+      text-align: end;
+      @include fontDesigner(rgb(0, 0, 0), 'Oswald', 24px, 400, auto, 0);
+    }
+    .wrapper-form-shopping {
+      border-bottom: 0.5px solid rgb(0, 0, 0);
+      padding-bottom: 50px;
+
+      .form-shopping {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        .shopping-label {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          @include fontDesigner(rgb(0, 0, 0), 'Oswald', 20px, 400, auto, 0);
+          input {
+            padding-left: 10px;
+            box-sizing: border-box;
+            @include fontDesigner(rgb(0, 0, 0), 'Oswald', 20px, 200, auto, 0);
+            height: 56px;
+            border: 1px solid rgb(0, 0, 0);
+            border-radius: 5px;
+          }
+        }
+      }
+      .form-shopping_delivery-title {
+        @include fontDesigner(rgb(0, 0, 0), 'Arial', 20px, 400, auto, 0);
+        text-transform: uppercase;
+        margin: 100px 0 50px 0;
+      }
+      .form-shopping_desc {
+        @include fontDesigner(rgb(0, 0, 0), 'Arial', 16px, 400, auto, 0);
+        margin: 0;
+        margin-top: 50px;
+      }
+    }
+    .privacy-policy {
+      padding: 50px 0 50px 0;
+      .privacy-policy_label {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        @include fontDesigner(rgb(0, 0, 0), 'Oswald', 20px, 200, auto, 0);
+        input {
+          width: 23px;
+          height: 23px;
+        }
+      }
+    }
+    .shopping-cart_price__accent {
+      padding: 44px 0 90px 0;
+      align-self: flex-end;
+      border-top: 0.5px solid rgb(0, 0, 0);
+      width: 220px;
+    }
+    .shopping-cart_btn {
+      padding: 15px;
+      cursor: pointer;
+      margin: auto;
+      width: 310px;
+      height: 60px;
+      border-radius: 10px;
+      border: none;
+      background: rgb(134, 153, 195);
+      @include fontDesigner(rgb(255, 255, 255), 'Oswald', 20px, 400, auto, 0);
+    }
+  }
+}
+.modal-shopping-cart__active {
+  display: block;
+}
+.faq-page {
+  display: flex;
+  flex-direction: column;
+  gap: 150px;
+  height: 100vh;
+  padding: 10px 100px;
+  background-image: url(../img/fqaPage/fqaBg.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  .wrapper-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      img {
+        width: 60px;
+      }
+      .logo_text {
+        @include fontDesigner(rgb(53, 53, 53), 'Oswald', 20px, 400, 21px, 0);
+        text-transform: uppercase;
+        font-family: 'Oswald';
+        cursor: pointer;
+      }
+    }
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+      padding: 0;
+      margin: 0;
+
+      justify-content: space-between;
+
+      .menu_item {
+        @include fontDesigner(rgb(53, 53, 53), 'Arial', 20px, 600, 36px, 0);
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        img {
+          height: 30px;
+        }
+        .menu_link {
+          text-decoration: none;
+          @include fontDesigner(rgb(53, 53, 53), 'Arial', 20px, 600, 36px, 0);
+          &:visited {
+            color: rgb(53, 53, 53);
+          }
+          &:hover {
+            color: rgb(41, 69, 100);
+          }
+        }
+      }
+    }
+  }
+  .wrapper-slogan {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    .slogan {
+      @include fontDesigner(rgb(41, 69, 100), 'Oswald', 80px, 400, 85px, 0);
+      margin: 0;
+    }
+    .slogan_btn {
+      @include btn(
+        310px,
+        60px,
+        10px,
+        rgb(41, 69, 100),
+        rgb(255, 255, 255),
+        24px
+      );
+    }
+  }
+}
+.faq {
+  .wrapper-faq {
+    padding: 100px 100px 0 100px;
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+    .inner-faq {
+      .faq-list {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        gap: 20px;
+        .faq-list_question {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          border-radius: 20px;
+          background: rgb(134, 153, 195);
+          background-image: url(../img/fqaPage/frame.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 90%;
+          padding: 50px;
+          width: 626px;
+          height: 328px;
+
+          @include fontDesigner(
+            rgb(255, 255, 255),
+            'Arial',
+            24px,
+            400,
+            40px,
+            0
+          );
+        }
+        .faq-list_answer {
+          padding: 50px;
+          border-radius: 20px;
+          background: rgb(41, 69, 100);
+          width: 950px;
+          text-indent: 30px;
+          @include fontDesigner(
+            rgb(255, 255, 255),
+            'Arial',
+            20px,
+            400,
+            25px,
+            0
+          );
+          .faq-list_answer__accent {
+            font-weight: 700;
+            font-style: italic;
+          }
+        }
+      }
+    }
+    .wrapper-link-email {
+      padding: 69px;
+      width: max-content;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: url(../img/fqaPage/frame_black.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      align-self: flex-end;
+      .link-email {
+        text-decoration: none;
+
+        @include fontDesigner(rgb(41, 69, 100), 'Arial', 20px, 400, 25px, 2px);
+        .link-email_accent {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+.customer-reviews-faq {
+  padding: 10px;
+  .swiper {
+    padding: 50px;
+    .my-swiper-wrapper {
+      // gap: 24px;
+      // width: 85%;
+
+      overflow: hidden;
+      .swiper-slide {
+        width: 300px;
+        height: 300px;
+        padding: 24px;
+        border-radius: 5px;
+        background: rgb(255, 239, 166);
+        .title {
+          width: 97px;
+          height: 97px;
+          border-radius: 50%;
+          margin: auto;
+          background-color: rgb(41, 69, 100, 0.5);
+        }
+        .subtitle {
+          margin: 0;
+          @include fontDesigner(
+            rgb(41, 69, 100),
+            'Oswald',
+            45px,
+            400,
+            55px,
+            2px
+          );
+        }
+        .text {
+          @include fontDesigner(rgb(53, 53, 53), 'Arial', 16px, 400, 40px, 0);
+          // display: inline;
+          text-align: justify;
+        }
+      }
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: rgb(134, 153, 195);
+    }
+  }
+  .feedback {
+    display: flex;
+    flex-direction: column;
+    .feedback-btn {
+      cursor: pointer;
+      margin-right: 100px;
+      align-self: flex-end;
+      color: rgb(255, 255, 255);
+      border-radius: 10px;
+      background: rgb(41, 69, 100);
+      border: none;
+      width: 310px;
+      height: 60px;
+      @include fontDesigner(rgb(255, 255, 255), 'Arial', 24px, 400, 40px, 0);
+    }
+    .modal-feedback {
+      display: none;
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgb(255, 255, 255, 0.2);
+
+      .feedback-form {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        padding: 30px 24px;
+        width: 450px;
+        position: relative;
+        border-radius: 10px;
+        background: rgb(134, 153, 195);
+        gap: 24px;
+        .feedback-form_close {
+          position: absolute;
+          padding: 0;
+          border: none;
+          background: transparent;
+          right: 24px;
+        }
+        .feedback-title {
+          @include fontDesigner(
+            rgb(255, 255, 255),
+            'Oswald',
+            24px,
+            400,
+            40px,
+            0
+          );
+          text-align: center;
+          margin: 0;
+        }
+        .feedback-input {
+          @include fontDesigner(
+            rgb(255, 255, 255),
+            'Arial',
+            20px,
+            400,
+            40px,
+            0
+          );
+          display: flex;
+          flex-direction: column;
+          input {
+            @include fontDesigner(
+              rgb(255, 255, 255),
+              'Arial',
+              16px,
+              400,
+              40px,
+              0
+            );
+            height: 41px;
+            border: 1px solid rgb(255, 255, 255);
+            background-color: rgb(134, 153, 195);
+            &::placeholder {
+              color: rgb(217, 217, 217);
+            }
+          }
+          textarea {
+            width: 404px;
+            height: 173px;
+            border: 1px solid rgb(255, 255, 255);
+            background-color: rgb(134, 153, 195);
+            @include fontDesigner(
+              rgb(255, 255, 255),
+              'Arial',
+              16px,
+              400,
+              40px,
+              0
+            );
+          }
+        }
+        .feedback-submit {
+          @include fontDesigner(rgb(53, 53, 53), 'Oswald', 24px, 400, 40px, 0);
+          border-radius: 3px;
+          background: rgb(255, 239, 166);
+          width: 140px;
+          height: 42px;
+          border: none;
+          margin: auto;
+        }
+      }
+    }
+    .modal-feedback__active {
+      display: flex;
+    }
+    .message-feedback {
+      position: absolute;
+      left: 35%;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border-radius: 10px;
+      width: 350px;
+      height: 100px;
+      padding: 10px;
+      background-color: #8699c3;
+      @include fontDesigner(rgb(255, 255, 255), 'Arial', 16px, 400, 20px, 0);
+    }
+    .message-feedback__active {
+      display: flex;
+    }
+  }
+}

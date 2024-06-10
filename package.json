@@ -1,0 +1,23 @@
+{
+  "name": "swedishstyleshop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katiiisha/SwedishStyleShops.git"
+  },
+  "author": "katiisha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/katiiisha/SwedishStyleShops/issues"
+  },
+  "homepage": "https://github.com/katiiisha/SwedishStyleShops#readme",
+  "dependencies": {
+    "body-scroll-lock": "^4.0.0-beta.0",
+    "swiper": "^11.1.3"
+  }
+}

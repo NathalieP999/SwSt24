@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/index.css" />
+    <title>Контакты</title>
+    <script type="module" src="js/index.mjs "></script>
+    <script src="node_modules/body-scroll-lock/lib/bodyScrollLock.js"></script>
+  </head>
+  <body>
+    <header class="contact-page">
+      <nav class="wrapper-menu">
+        <div class="logo">
+          <img src="img/icon/logo.svg" alt="Логотип" />
+          <span class="logo_text">
+            SWEDISH
+            <br />
+            STYLE
+          </span>
+        </div>
+        <ul class="menu">
+          <li class="menu_item">
+            <a href="index.html" class="menu_link">Главная</a>
+          </li>
+          <li class="menu_item">
+            <a href="catalog.html" class="menu_link">Каталог</a>
+          </li>
+          <li class="menu_item">
+            <a href="contact.html" class="menu_link">Контакты</a>
+          </li>
+          <li class="menu_item">
+            <a href="faq.html" class="menu_link">FAQ</a>
+          </li>
+          <li class="menu_item" class="menu_link">
+            <a href="tel:+7(812)563-98-97" class="menu_link">
+              +7&nbsp;(812)&nbsp;563&nbsp;98&nbsp;97
+            </a>
+          </li>
+          <li class="menu_item menu_item__cart">
+            <img src="img/icon/cart.svg" alt="Корзина покупок" />
+          </li>
+        </ul>
+      </nav>
+      <div class="wrapper-slogan">
+        <h1 class="slogan">
+          Дарим комфорт и уют
+          <br />
+          вашему дому
+        </h1>
+      </div>
+    </header>
+    <section class="modal-shopping-cart">
+      <div class="wrapper-shopping-cart">
+        <div class="shopping-cart_header">
+          <h3 class="shopping-cart__title">корзина</h3>
+          <button class="shopping-cart_close"></button>
+        </div>
+        <div class="wrapper-list-buy">
+          <ul class="list-buy">
+            <li class="list-buy_item">
+              <div class="wpapper-item">
+                <button class="item_delete"></button>
+                <div class="item">
+                  <div class="item_img"></div>
+                  <div class="item_header">
+                    <p class="item_title">Стул ингольт</p>
+                    <p class="item_desc">
+                      цвет: <span class="item_desc__color"></span>
+                    </p>
+                    <p class="item_desc">
+                      размер: <span class="item_desc_size">150 х 50 х 70</span>
+                    </p>
+                  </div>
+                </div>
+
+                <div class="control-buttons">
+                  <button class="сontrol-button control-buttons__minus">
+                    &#150;
+                  </button>
+                  <span class="сontrol-button control-button__quantity">2</span>
+                  <button class="сontrol-button control-buttons__plus">
+                    +
+                  </button>
+                  <span class="сontrol-button control-buttons__price">
+                    2200 P
+                  </span>
+                </div>
+              </div>
+            </li>
+            <li class="list-buy_item">
+              <div class="wpapper-item">
+                <button class="item_delete"></button>
+                <div class="item">
+                  <div class="item_img"></div>
+                  <div class="item_header">
+                    <p class="item_title">Стул ингольт</p>
+                    <p class="item_desc">
+                      цвет: <span class="item_desc__color"></span>
+                    </p>
+                    <p class="item_desc">
+                      размер: <span class="item_desc_size">150 х 50 х 70</span>
+                    </p>
+                  </div>
+                </div>
+
+                <div class="control-buttons">
+                  <button class="сontrol-button control-buttons__minus">
+                    &#150;
+                  </button>
+                  <span class="сontrol-button control-button__quantity">2</span>
+                  <button class="сontrol-button control-buttons__plus">
+                    +
+                  </button>
+                  <span class="сontrol-button control-buttons__price">
+                    2200 P
+                  </span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <p class="shopping-cart_price">
+          Сумма <span class="list-buy_price__text">4 400 P</span>
+        </p>
+        <div class="wrapper-form-shopping">
+          <form action="" class="form-shopping">
+            <label class="shopping-label shopping-name">
+              ФИО
+              <input type="text" placeholder="Ваши Фамилия, Имя, Отчество" />
+            </label>
+            <label class="shopping-label shopping-tel">
+              Телефон
+              <input type="tel" placeholder="+7 (999) 999 99 99" />
+            </label>
+            <label class="shopping-label shopping-email">
+              Электронная почта
+              <input type="email" name="email" placeholder="Ваш e-mail" />
+            </label>
+          </form>
+          <h3 class="form-shopping_delivery-title">Доставка</h3>
+          <form action="" class="form-shopping">
+            <label class="shopping-label shopping-sity">
+              Город
+              <input type="text" placeholder="Санкт-Петербург" />
+            </label>
+            <label class="shopping-label shopping-adress">
+              Адрес
+              <input type="text" placeholder="пр-кт Ветеранов, 99, кв.5" />
+            </label>
+          </form>
+          <p class="form-shopping_desc">
+            Данные по заказу будут высланы на e-mail вместе с номером
+            отслеживания.
+          </p>
+        </div>
+        <div class="privacy-policy">
+          <label class="privacy-policy_label">
+            <input type="checkbox" />
+            Политика Конфиденциальности
+          </label>
+        </div>
+        <p class="shopping-cart_price shopping-cart_price__accent">
+          Сумма <span class="list-buy_price__text">4 400 P</span>
+        </p>
+        <button class="shopping-cart_btn">Оформить заказ</button>
+      </div>
+    </section>
+    <section class="contact">
+      <div class="wrapper-contact">
+        <h1 class="contact_title">Контакты</h1>
+        <div class="inner-contact">
+          <div class="contact_item">
+            <h2 class="contact_subtitle">почта для связи</h2>
+            <p class="contact_text">office@ndseller.ru</p>
+          </div>
+          <div class="contact_item">
+            <h2 class="contact_subtitle">время работы</h2>
+            <p class="contact_text">
+              Пн&mdash;Пт 10:00&ndash;20:30
+              <br />
+              Сб&mdash;Вc Выходной
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer-main">
+      <div class="footer-main-bg"></div>
+      <ul class="footer-main_list">
+        <li class="footer-main_item">
+          <img
+            src="img/mainPage/footerMain/icon-contact.svg"
+            alt=""
+            class="footer-main_img"
+          />
+          <div class="footer-main_wrapper-text">
+            <h3 class="footer-main_title">КОНТАКТЫ</h3>
+            <p class="footer-main_text">office@ndseller.ru</p>
+          </div>
+        </li>
+        <li class="footer-main_item">
+          <img
+            src="img/mainPage/footerMain/icon-map.svg"
+            alt=""
+            class="footer-main_img"
+          />
+          <div class="footer-main_wrapper-text">
+            <h3 class="footer-main_title">адрес</h3>
+            <p class="footer-main_text">
+              г. Великий Новгород
+              <br />
+              ул. Нехинская 59б
+            </p>
+          </div>
+        </li>
+        <li class="footer-main_item">
+          <img
+            src="img/mainPage/footerMain/icon-time.svg"
+            alt=""
+            class="footer-main_img"
+          />
+          <div class="footer-main_wrapper-text">
+            <h3 class="footer-main_title">время работы</h3>
+            <p class="footer-main_text">
+              Пн - Пт 10:00 - 20:30
+              <br />
+              Сб - Вс выходной
+            </p>
+          </div>
+        </li>
+      </ul>
+      <p class="footer-main_data">
+        ИП&nbsp;Романов&nbsp;Никита&nbsp;Дмитриевич 322530000011161
+      </p>
+    </footer>
+  </body>
+</html>

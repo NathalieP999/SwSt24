@@ -1,0 +1,518 @@
+.catalog-page {
+  display: flex;
+  flex-direction: column;
+  gap: 150px;
+  height: 100vh;
+  padding: 10px 100px;
+  background-image: url(../img/catalogPage/catalogBg.svg);
+  // background-color: rgb(0, 0, 0, 0.3);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  .wrapper-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      img {
+        width: 60px;
+      }
+      .logo_text {
+        @include fontDesigner(rgb(53, 53, 53), 'Oswald', 20px, 400, 21px, 0);
+        text-transform: uppercase;
+        font-family: 'Oswald';
+        cursor: pointer;
+      }
+    }
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+      padding: 0;
+      margin: 0;
+
+      justify-content: space-between;
+
+      .menu_item {
+        @include fontDesigner(rgb(53, 53, 53), 'Arial', 20px, 600, 36px, 0);
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        img {
+          height: 30px;
+        }
+        .menu_link {
+          text-decoration: none;
+          @include fontDesigner(rgb(53, 53, 53), 'Arial', 20px, 600, 36px, 0);
+          &:visited {
+            color: rgb(53, 53, 53);
+          }
+          &:hover {
+            color: rgb(41, 69, 100);
+          }
+        }
+      }
+    }
+  }
+  .wrapper-slogan {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    .slogan {
+      @include fontDesigner(rgb(41, 69, 100), 'Oswald', 80px, 400, 85px, 0);
+      margin: 0;
+    }
+    .slogan_btn {
+      @include btn(
+        310px,
+        60px,
+        10px,
+        rgb(41, 69, 100),
+        rgb(255, 255, 255),
+        24px
+      );
+    }
+  }
+}
+.catalog-menu {
+  display: flex;
+  flex-direction: column;
+  // position: relative;
+  margin: 100px;
+  .tabs-nav {
+    margin-bottom: 50px;
+    .tabs-list {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      gap: 23px;
+      .tabs-list_link {
+        border-radius: 5px;
+        background: rgb(134, 153, 195);
+        padding: 15px 22px 15px 22px;
+        text-decoration: none;
+        @include fontDesigner(rgb(255, 255, 255), 'Arial', 20px, 400, 30px, 0);
+        // .tabs-list_item {
+
+        // }
+      }
+      .tabs-list_link__active {
+        background-color: rgb(41, 69, 100);
+      }
+    }
+  }
+  .all-catalog {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 100px;
+    .wrapper-card-product {
+      display: none;
+      flex-direction: column;
+      .card-product {
+        // width: 50%;
+        width: 300px;
+        height: 300px;
+        margin: 0;
+        padding: 50px;
+        background-image: url(../img/catalogPage/catalog-menu/cardBorder.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          // width: 100%;
+          height: 100%;
+        }
+      }
+      .card-product_title {
+        @include fontDesigner(rgb(0, 0, 0), 'Oswald', 24px, 400, 40px, 0);
+      }
+      .card-product_price {
+        @include fontDesigner(rgb(0, 0, 0), 'Oswald', 20px, 200, 36px, 0);
+        margin: 0;
+      }
+    }
+    .wrapper-card-product__active {
+      display: flex;
+    }
+  }
+  .combination-with-chairs {
+    margin: 100px 0 63px 0;
+    .combination-with-chairs_img {
+      width: 100%;
+    }
+    .combination-with-chairs_title {
+      @include fontDesigner(rgb(53, 53, 53), 'Arial', 20px, 600, 36px, 0);
+    }
+  }
+  .catalog-menu_btn {
+    @include btn(310px, 60px, 10px, rgb(41, 69, 100), rgb(255, 255, 255), 24px);
+    align-self: flex-end;
+  }
+}
+.modal-card-product {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 130%;
+
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(255, 255, 255, 0.5);
+  .product-description {
+    margin-top: 10vh;
+    .my-swiper {
+      width: 90%;
+      background-color: #fff;
+      .my-swiper-wrapper {
+        width: 80%;
+        .swiper-slide {
+          height: 80vh;
+          padding-right: 60px;
+          padding-left: 60px;
+        }
+        .slide-prev {
+          .inner-slide-prev {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            // background-image: url(../img/catalogPage/cardProduct/herald/chair1.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            gap: 40px;
+            position: relative;
+            .advantages-list {
+              position: relative;
+              z-index: 0;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-end;
+              gap: 50px;
+              list-style-type: none;
+              padding: 0;
+              margin: 0;
+              height: max-content;
+              @include fontDesigner(rgb(0, 0, 0), 'Arial', 20px, 400, 30px, 0);
+              .advantages-item {
+                display: flex;
+                align-items: center;
+                gap: 13px;
+                text-align: end;
+                position: relative;
+                .advantages-item_text {
+                  width: 268px;
+                  margin: 0;
+                }
+                .advantages-item_sqr {
+                  width: 20px;
+                  height: 20px;
+                  border-radius: 50%;
+                  background: rgb(255, 241, 177);
+                }
+                &:first-child {
+                  margin-top: 85px;
+                }
+              }
+              &::after {
+                content: '';
+                height: 92%;
+                width: 2px;
+                position: absolute;
+                background-color: black;
+                z-index: -1;
+                right: 9px;
+              }
+            }
+            .product-desc {
+              padding-top: 100px;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-end;
+              gap: 80px;
+              .product-img {
+                display: flex;
+                gap: 50px;
+                margin: 0;
+                img {
+                  width: 200px;
+                  height: 200px;
+                }
+              }
+              .desc-list {
+                padding: 0;
+                list-style-type: none;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                .desc-item {
+                  display: flex;
+                  justify-content: flex-end;
+                  gap: 15px;
+                  @include fontDesigner(
+                    rgb(53, 53, 53),
+                    'Arial',
+                    20px,
+                    100,
+                    25px,
+                    0
+                  );
+                  .desc-item_text {
+                    width: 70px;
+                    text-align: end;
+                    font-weight: 100;
+                  }
+                }
+                .desc-item__title {
+                  @include fontDesigner(
+                    rgb(53, 53, 53),
+                    'Oswald',
+                    50px,
+                    300,
+                    50px,
+                    0
+                  );
+                }
+                .desc-item__color {
+                  display: flex;
+                  align-items: center;
+                  gap: 15px;
+                  .desc-item_color {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    border: 0.5px solid rgb(53, 53, 53);
+                  }
+                  .desc-item_color_black {
+                    background: rgb(0, 0, 0);
+                  }
+                  .desc-item_color_brown {
+                    background-color: rgb(168, 134, 87);
+                  }
+                  .desc-item_color_brown-white {
+                    background: linear-gradient(
+                      90deg,
+                      rgb(168, 134, 87) 50%,
+                      rgb(255, 255, 255) 50%
+                    );
+                  }
+                  .desc-item_color_brown-black {
+                    background: linear-gradient(
+                      90deg,
+                      rgb(168, 134, 87) 50%,
+                      rgb(0, 0, 0) 50%
+                    );
+                  }
+                  .desc-item_color__active {
+                    width: 40px;
+                    height: 40px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .slide-characteristic {
+          .inner-slide-characteristic {
+            display: flex;
+            flex-direction: column;
+            gap: 20px 50px;
+
+            .slide-characteristic_title {
+              margin: 0;
+              @include fontDesigner(
+                rgb(41, 69, 100),
+                'Oswald',
+                50px,
+                400,
+                50px,
+                0
+              );
+            }
+            .wrapper-characteristic {
+              display: flex;
+              gap: 30px;
+              .wrapper-characteristic-column {
+                width: 48%;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                .characteristic {
+                  display: flex;
+                  flex-direction: column;
+
+                  height: max-content;
+                  border-radius: 10px;
+                  background: rgb(255, 239, 166);
+                  padding: 20px;
+                  .characteristic_title {
+                    margin: 0;
+                    @include fontDesigner(
+                      rgb(0, 0, 0),
+                      'Oswald',
+                      36px,
+                      400,
+                      36px,
+                      5px
+                    );
+                  }
+                  .characteristic_list {
+                    gap: 5px;
+                    display: flex;
+                    flex-direction: column;
+                    list-style-type: none;
+                    padding: 0;
+                    .characteristic_item {
+                      display: flex;
+                      justify-content: space-between;
+                      .characteristic_text {
+                        @include fontDesigner(
+                          rgb(0, 0, 0),
+                          'Arial',
+                          18px,
+                          400,
+                          18px,
+                          0
+                        );
+                      }
+                      .characteristic_text__accent {
+                        font-weight: 700;
+                      }
+                    }
+                    .characteristic_item__column {
+                      flex-direction: column;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .slide-size {
+          display: flex;
+          align-items: center;
+          video {
+            width: 500px;
+            height: 500px;
+          }
+          .chair-size {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            height: 500px;
+            .chair-size-img {
+              width: 470px;
+            }
+            .chair-size_title {
+              @include fontDesigner(
+                rgb(41, 69, 100),
+                'Oswald',
+                50px,
+                400,
+                50px,
+                3px
+              );
+            }
+          }
+        }
+        .slide-infa {
+          .inner-infa {
+            position: relative;
+
+            background-image: url(../img/catalogPage/cardProduct/bg-slide.png);
+            background-size: contain;
+            height: 100%;
+            .list-infa {
+              display: flex;
+              flex-direction: column;
+              gap: 50px;
+              list-style-type: none;
+              padding: 0;
+              margin: 0;
+              margin-left: 100px;
+              .item-infa {
+                display: flex;
+                align-items: center;
+                gap: 13px;
+
+                .item-infa_sqr {
+                  width: 20px;
+                  height: 20px;
+                  border-radius: 50%;
+                  background: rgb(255, 241, 177);
+                }
+                .item-infa_title {
+                  display: flex;
+                  flex-direction: column;
+                  margin: 0;
+                  @include fontDesigner(
+                    rgb(41, 69, 100),
+                    'Oswald',
+                    30px,
+                    400,
+                    30px,
+                    0
+                  );
+                  .item-infa_text {
+                    margin: 0;
+                    @include fontDesigner(
+                      rgb(0, 0, 0),
+                      'Arial',
+                      20px,
+                      400,
+                      30px,
+                      0
+                    );
+                  }
+                }
+                &:first-child {
+                  margin-top: 85px;
+                }
+              }
+              &::after {
+                content: '';
+                height: 69%;
+                width: 2px;
+                position: absolute;
+                background-color: black;
+                z-index: -1;
+                left: 109px;
+              }
+            }
+          }
+        }
+      }
+      .swiper-button-prev,
+      .swiper-button-next,
+      .swiper-pagination-bullet-active {
+        color: rgb(0, 0, 0);
+      }
+    }
+  }
+}
+.modal-card-product__active {
+  display: block;
+}
+.links-shops {
+  .wrapper-links-shops {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 22px 51px;
+    width: max-content;
+    margin: auto;
+    .links-shops_link {
+      display: flex;
+      text-decoration: none;
+    }
+  }
+}

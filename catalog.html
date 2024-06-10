@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/index.css" />
+    <title>Каталог</title>
+    <script type="module" src="js/index.mjs "></script>
+    <script src="node_modules/body-scroll-lock/lib/bodyScrollLock.js"></script>
+  </head>
+  <body>
+    <header class="catalog-page">
+      <nav class="wrapper-menu">
+        <div class="logo">
+          <img src="img/icon/logo.svg" alt="Логотип" />
+          <span class="logo_text">
+            SWEDISH
+            <br />
+            STYLE
+          </span>
+        </div>
+        <ul class="menu">
+          <li class="menu_item">
+            <a href="index.html" class="menu_link">Главная</a>
+          </li>
+          <li class="menu_item">
+            <a href="catalog.html" class="menu_link">Каталог</a>
+          </li>
+          <li class="menu_item">
+            <a href="contact.html" class="menu_link">Контакты</a>
+          </li>
+          <li class="menu_item">
+            <a href="faq.html" class="menu_link">FAQ</a>
+          </li>
+          <li class="menu_item">
+            <a href="tel:+7(812)563-98-97" class="menu_link">
+              +7&nbsp;(812)&nbsp;563&nbsp;98&nbsp;97
+            </a>
+          </li>
+          <li class="menu_item menu_item__cart">
+            <img src="img/icon/cart.svg" alt="Корзина покупок" />
+          </li>
+        </ul>
+      </nav>
+      <div class="wrapper-slogan">
+        <h1 class="slogan">
+          Украсьте свою
+          <br />
+          жизнь искусством
+        </h1>
+      </div>
+    </header>
+    <section class="modal-shopping-cart">
+      <div class="wrapper-shopping-cart">
+        <div class="shopping-cart_header">
+          <h3 class="shopping-cart__title">корзина</h3>
+          <button class="shopping-cart_close"></button>
+        </div>
+        <div class="wrapper-list-buy">
+          <ul class="list-buy">
+            <!-- <li class="list-buy_item">
+              <div class="wpapper-item">
+                <button class="item_delete"></button>
+                <div class="item">
+                  <div class="item_img"></div>
+                  <div class="item_header">
+                    <p class="item_title">Стул ингольт</p>
+                    <p class="item_desc">
+                      цвет: <span class="item_desc__color"></span>
+                    </p>
+                    <p class="item_desc">
+                      размер: <span class="item_desc_size">150 х 50 х 70</span>
+                    </p>
+                  </div>
+                </div>
+
+                <div class="control-buttons">
+                  <button class="сontrol-button control-buttons__minus">
+                    &#150;
+                  </button>
+                  <span class="сontrol-button control-button__quantity">1</span>
+                  <button class="сontrol-button control-buttons__plus">
+                    +
+                  </button>
+                  <span class="сontrol-button control-buttons__price">
+                    2200 P
+                  </span>
+                </div>
+              </div>
+            </li> -->
+            
+          </ul>
+        </div>
+        <p class="shopping-cart_price">
+          Сумма <span class="list-buy_price__text summa-cart">0 P</span>
+        </p>
+        <div class="wrapper-form-shopping">
+          <form action="" class="form-shopping">
+            <label class="shopping-label shopping-name">
+              ФИО
+              <input type="text" placeholder="Ваши Фамилия, Имя, Отчество" />
+            </label>
+            <label class="shopping-label shopping-tel">
+              Телефон
+              <input type="tel" placeholder="+7 (999) 999 99 99" />
+            </label>
+            <label class="shopping-label shopping-email">
+              Электронная почта
+              <input type="email" name="email" placeholder="Ваш e-mail" />
+            </label>
+          </form>
+          <h3 class="form-shopping_delivery-title">Доставка</h3>
+          <form action="" class="form-shopping">
+            <label class="shopping-label shopping-sity">
+              Город
+              <input type="text" placeholder="Санкт-Петербург" />
+            </label>
+            <label class="shopping-label shopping-adress">
+              Адрес
+              <input type="text" placeholder="пр-кт Ветеранов, 99, кв.5" />
+            </label>
+          </form>
+          <p class="form-shopping_desc">
+            Данные по заказу будут высланы на e-mail вместе с номером
+            отслеживания.
+          </p>
+        </div>
+        <div class="privacy-policy">
+          <label class="privacy-policy_label">
+            <input type="checkbox" />
+            Политика Конфиденциальности
+          </label>
+        </div>
+        <p class="shopping-cart_price shopping-cart_price__accent">
+          Сумма <span class="list-buy_price__text summa-cart"> 0 P</span>
+        </p>
+        <button class="shopping-cart_btn">Оформить заказ</button>
+      </div>
+    </section>
+    <section class="modal-card-product ">
+       <div class="product-description">
+        <div class="swiper my-swiper">
+          <div class="swiper-wrapper my-swiper-wrapper">
+            <div class="swiper-slide slide-prev">
+              <div class="inner-slide-prev">
+                <ul class="advantages-list">
+                  <li class="advantages-item">
+                    <p class="advantages-item_text">
+                      Скругленные углы для максимальной безопасности
+                    </p>
+                    <div class="advantages-item_sqr"></div>
+                  </li>
+                  <li class="advantages-item">
+                    <p class="advantages-item_text">Надежная конструкция</p>
+                    <div class="advantages-item_sqr"></div>
+                  </li>
+                  <li class="advantages-item">
+                    <p class="advantages-item_text">Прочная акриловая эмаль</p>
+                    <div class="advantages-item_sqr"></div>
+                  </li>
+                  <li class="advantages-item">
+                    <p class="advantages-item_text">
+                      Простая сборка, понадобится только крестообразная(+)
+                      отвертка
+                    </p>
+                    <div class="advantages-item_sqr"></div>
+                  </li>
+                </ul>
+                <div class="product-desc">
+                  <figure class="product-img">
+                    <img src="img/catalogPage/cardProduct/chair2.png" alt="" class="product-img-one" />
+                    <img src="img/catalogPage/cardProduct/chair3.png" alt="" class="product-img-two"/>
+                  </figure>
+                  <ul class="desc-list">
+                    <li class="desc-item desc-item__title">СТУЛ ИНГОЛЬТ</li>
+                    <li class="desc-item desc-item__color">
+                      <div class="desc-item_color"></div>
+                      <div class="desc-item_color desc-item_color_brown"></div>
+                      <div class="desc-item_color desc-item_color_black"></div>
+                      <div
+                        class="desc-item_color desc-item_color_brown-white"
+                      ></div>
+                      <div
+                        class="desc-item_color desc-item_color_brown-black desc-item_color__active"
+                      ></div>
+                      <span class="desc-item_text">Цвета</span>
+                    </li>
+                    <li class="desc-item">
+                      <span class="desc-item_price"> 4 000 Р </span>
+                      <span class="desc-item_text">Цена</span>
+                    </li>
+                    <li class="desc-item desc-item-cart">
+                      <img src="img/icon/cart.svg" alt="" />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide slide-characteristic">
+              <div class="inner-slide-characteristic">
+                <h2 class="slide-characteristic_title">Характеристики</h2>
+                <div class="wrapper-characteristic">
+                  <div class="wrapper-characteristic-column">
+                    <div class="characteristic">
+                      <h3 class="characteristic_title">Основные</h3>
+                      <ul class="characteristic_list">
+                        <li class="characteristic_item">
+                          <span class="characteristic_text">
+                            Количество в комплекте
+                          </span>
+                          <span
+                            class="characteristic_text characteristic_text__accent quantity"
+                           
+                          >
+                            1 шт
+                          </span>
+                        </li>
+                        <li class="characteristic_item">
+                          <span class="characteristic_text">
+                            Макс. нагрузка
+                          </span>
+                          <span
+                            class="characteristic_text characteristic_text__accent load"
+                            
+                          >
+                            140 кг
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="characteristic">
+                      <h3 class="characteristic_title">Материал</h3>
+                      <ul class="characteristic_list">
+                        <li class="characteristic_item characteristic_item__column">
+                          <span class="characteristic_text"
+                            >Материал корпуса
+                          </span>
+                          
+                          <span
+                            class="characteristic_text characteristic_text__accent frame"
+                          >
+                            Дерево, Массив сосны
+                          </span>
+                        </li>
+                        <li class="characteristic_item characteristic_item__column">
+                          <span class="characteristic_text"
+                            >Покрытие корпуса</span
+                          >
+                          <span
+                            class="characteristic_text characteristic_text__accent coating"
+                          >
+                            Влагостойкое, Матовое, Лакированное
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="characteristic">
+                      <h3 class="characteristic_title">Конструкция</h3>
+                      <ul class="characteristic_list">
+                        <li class="characteristic_item">
+                          <span class="characteristic_text">
+                            С подлокотниками
+                          </span>
+                          <span
+                            class="characteristic_text characteristic_text__accent"
+                          >
+                            Нет
+                          </span>
+                        </li>
+                        <li class="characteristic_item">
+                          <span class="characteristic_text">
+                            Регулируемая спинка
+                          </span>
+                          <span
+                            class="characteristic_text characteristic_text__accent"
+                          >
+                            Нет
+                          </span>
+                        </li>
+                        <li class="characteristic_item characteristic_item__column">
+                          <span class="characteristic_text"> Особенности </span>
+                          <span
+                            class="characteristic_text characteristic_text__accent"
+                          >
+                            С жестким сиденьем, без подлокотников, на ножках
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="wrapper-characteristic-column">
+                    <div class="characteristic">
+                      <h3 class="characteristic_title">Размеры</h3>
+                      <ul class="characteristic_list">
+                        <li class="characteristic_item">
+                          <span class="characteristic_text">
+                            Высота сиденья
+                          </span>
+                          <span
+                            class="characteristic_text characteristic_text__accent heightSeat"
+                          >
+                            45 см
+                          </span>
+                        </li>
+                        <li class="characteristic_item">
+                          <span class="characteristic_text"
+                            >Ширина сиденья
+                          </span>
+                          <span
+                            class="characteristic_text characteristic_text__accent widthSeat"
+                          >
+                            42 см
+                          </span>
+                        </li>
+                        <li class="characteristic_item">
+                          <span class="characteristic_text">
+                            Глубина сиденья
+                          </span>
+                          <span
+                            class="characteristic_text characteristic_text__accent depthSeat"
+                          >
+                            38 см
+                          </span>
+                        </li>
+                        <li class="characteristic_item">
+                          <span class="characteristic_text"
+                            >Высота спинки
+                          </span>
+                          <span
+                            class="characteristic_text characteristic_text__accent heightBack"
+                          >
+                            47 см
+                          </span>
+                        </li>
+                        <li class="characteristic_item">
+                          <span class="characteristic_text">Ширина спинки</span>
+                          <span
+                            class="characteristic_text characteristic_text__accent widthBack"
+                          >
+                            42 см
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="characteristic">
+                      <h3 class="characteristic_title">Габариты и вес</h3>
+                      <ul class="characteristic_list">
+                        <li class="characteristic_item">
+                          <span class="characteristic_text"> Ширина </span>
+                          <span
+                            class="characteristic_text characteristic_text__accent widthFull"
+                          >
+                            40 см
+                          </span>
+                        </li>
+                        <li class="characteristic_item">
+                          <span class="characteristic_text"> Высота</span>
+                          <span
+                            class="characteristic_text characteristic_text__accent heightFull"
+                          >
+                            91 см
+                          </span>
+                        </li>
+                        <li class="characteristic_item">
+                          <span class="characteristic_text"> Глубина</span>
+                          <span
+                            class="characteristic_text characteristic_text__accent depthFull"
+                          >
+                            53 см
+                          </span>
+                        </li>
+                        <li class="characteristic_item">
+                          <span class="characteristic_text"> Вес товара </span>
+                          <span
+                            class="characteristic_text characteristic_text__accent weight"
+                          >
+                            5 кг
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide slide-size">
+              
+              <figure class="chair-size">
+                <img
+                  src="img/catalogPage/cardProduct/country/size.png"
+                  alt=""
+                  class="chair-size-img"
+                />
+                <figcaption class="chair-size_title">Габариты</figcaption>
+              </figure>
+            </div>
+            <div class="swiper-slide slide-infa">
+              <div class="inner-infa">
+                <ul class="list-infa">
+                  <li class="item-infa">
+                    <div class="item-infa_sqr"></div>
+                    <p class="item-infa_title">
+                      Форма поставки
+                      <span class="item-infa_text"  >В разобранном виде</span>
+                    </p>
+                  
+                    <p class="item-infa_text"></p>
+                  </ class="list-infa"li>
+                  <li class="item-infa">
+                    <div class="item-infa_sqr"></div>
+                    <p class="item-infa_title">
+                      Гарантийный срок
+                      <span class="item-infa_text">2 года</span>
+                    </p>
+                    
+                  </li>
+                  <li class="item-infa">
+                    <div class="item-infa_sqr"></div>
+                    <p class="item-infa_title">
+                      Вид выпуска
+                      <span class="item-infa_text">В разобранном виде</span>
+                    </p>
+                    
+                  </li>
+                  <li class="item-infa">
+                    <div class="item-infa_sqr"></div>
+                    <p class="item-infa_title">
+                      Страна изготовитель
+                      <span class="item-infa_text">
+                        Россия
+                      </span>
+                    </p>
+                    
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="swiper-pagination"></div> -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </section>
+    <section class="catalog-menu">
+      <nav class="tabs-nav">
+        <ul class="tabs-list">
+          <a
+            href=""
+            class="tabs-list_link tabs-list_link__active tabs-list_link__all"
+          >
+            <li class="tabs-list_item">Все</li>
+          </a>
+          <a href="" class="tabs-list_link tabs-list_link__chair">
+            <li class="tabs-list_item">Стулья</li>
+          </a>
+          <a href="" class="tabs-list_link tabs-list_link__table">
+            <li class="tabs-list_item">Столы</li>
+          </a>
+          <a href="" class="tabs-list_link tabs-list_link__accessory">
+            <li class="tabs-list_item">Аксессуары</li>
+          </a>
+        </ul>
+      </nav>
+      <div class="all-catalog">
+        <div
+          class="wrapper-card-product wrapper-card-product__active product-table"
+        >
+          <figure class="card-product">
+            <img
+              src="img/catalogPage/catalog-menu/table1.png"
+              alt=""
+              class="card-product_img"
+            />
+          </figure>
+          <figcaption class="card-product_title">Стол Оскар</figcaption>
+          <p class="card-product_price">Цена: 1 000H</p>
+        </div>
+        <div
+          class="wrapper-card-product wrapper-card-product__active product-chair"
+          data-name="ingolt"
+        >
+          <figure class="card-product">
+            <img
+              src="img/catalogPage/catalog-menu/chair1.png"
+              alt=""
+              class="card-product_img"
+            />
+          </figure>
+          <figcaption class="card-product_title">Стул Ингольт</figcaption>
+          <p class="card-product_price">Цена: 4200 Р</p>
+        </div>
+        <div
+          class="wrapper-card-product wrapper-card-product__active product-chair"
+          data-name="herald"
+        >
+          <figure class="card-product">
+            <img
+              src="img/catalogPage/catalog-menu/chair2.png"
+              alt=""
+              class="card-product_img"
+            />
+          </figure>
+          <figcaption class="card-product_title">Стул Вествик</figcaption>
+          <p class="card-product_price">Цена: 3900 Р</p>
+        </div>
+        <div
+          class="wrapper-card-product wrapper-card-product__active product-chair"
+          data-name="nordvik"
+        >
+          <figure class="card-product">
+            <img
+              src="img/catalogPage/catalog-menu/chair3.png"
+              alt=""
+              class="card-product_img"
+            />
+          </figure>
+          <figcaption class="card-product_title">Стул Нордвик</figcaption>
+          <p class="card-product_price">Цена: 3200 Р</p>
+        </div>
+        <div
+          class="wrapper-card-product wrapper-card-product__active product-chair"
+          data-name="lisabo"
+        >
+          <figure class="card-product">
+            <img
+              src="img/catalogPage/catalog-menu/chair4.png"
+              alt=""
+              class="card-product_img"
+            />
+          </figure>
+          <figcaption class="card-product_title">Стул Лисабо</figcaption>
+          <p class="card-product_price">Цена: 4100 Р</p>
+        </div>
+        <div
+          class="wrapper-card-product wrapper-card-product__active product-chair"
+          data-name="country"
+        >
+          <figure class="card-product">
+            <img
+              src="img/catalogPage/catalog-menu/chair5.png"
+              alt=""
+              class="card-product_img"
+            />
+          </figure>
+          <figcaption class="card-product_title">Стул Кантри</figcaption>
+          <p class="card-product_price">Цена: 4200 Р</p>
+        </div>
+      </div>
+     
+      <div class="combination-with-chairs">
+        <img
+          src="img/catalogPage/catalog-menu/combinationBg.png"
+          alt=""
+          class="combination-with-chairs_img"
+        />
+        <h3 class="combination-with-chairs_title">
+          Комбинация стол со стульями
+        </h3>
+      </div>
+      <button class="catalog-menu_btn">Оставить отзыв</button>
+    </section>
+    <section class="links-shops">
+      <div class="wrapper-links-shops">
+        <a href="#" class="links-shops_link">
+          <img
+            src="img/catalogPage/linkShop/wb.png"
+            alt="Ссылка на Вайлдбериз"
+          />
+        </a>
+        <a href="#" class="links-shops_link">
+          <img src="img/catalogPage/linkShop/ozon.png" alt="Ссылка на Озон" />
+        </a>
+        <a href="#" class="links-shops_link">
+          <img
+            src="img/catalogPage/linkShop/yandex.png"
+            alt="Ссылка на Яндекс-Маркет"
+          />
+        </a>
+        <a href="#" class="links-shops_link">
+          <img
+            src="img/catalogPage/linkShop/sber.png"
+            alt="Ссылка на Сбер-Маркет"
+          />
+        </a>
+      </div>
+    </section>
+    <footer class="footer-main">
+      <div class="footer-main-bg"></div>
+      <ul class="footer-main_list">
+        <li class="footer-main_item">
+          <img
+            src="img/mainPage/footerMain/icon-contact.svg"
+            alt=""
+            class="footer-main_img"
+          />
+          <div class="footer-main_wrapper-text">
+            <h3 class="footer-main_title">КОНТАКТЫ</h3>
+            <p class="footer-main_text">office@ndseller.ru</p>
+          </div>
+        </li>
+        <li class="footer-main_item">
+          <img
+            src="img/mainPage/footerMain/icon-map.svg"
+            alt=""
+            class="footer-main_img"
+          />
+          <div class="footer-main_wrapper-text">
+            <h3 class="footer-main_title">адрес</h3>
+            <p class="footer-main_text">
+              г. Великий Новгород
+              <br />
+              ул. Нехинская 59б
+            </p>
+          </div>
+        </li>
+        <li class="footer-main_item">
+          <img
+            src="img/mainPage/footerMain/icon-time.svg"
+            alt=""
+            class="footer-main_img"
+          />
+          <div class="footer-main_wrapper-text">
+            <h3 class="footer-main_title">время работы</h3>
+            <p class="footer-main_text">
+              Пн - Пт 10:00 - 20:30
+              <br />
+              Сб - Вс выходной
+            </p>
+          </div>
+        </li>
+      </ul>
+      <p class="footer-main_data">
+        ИП&nbsp;Романов&nbsp;Никита&nbsp;Дмитриевич 322530000011161
+      </p>
+    </footer>
+  </body>
+</html>

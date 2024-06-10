@@ -1,0 +1,27 @@
+@mixin fontDesigner(
+  $color,
+  $font-family,
+  $font-size,
+  $font-weight,
+  $line-height,
+  $letter-spacing
+) {
+  color: $color;
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+}
+@mixin btn($width, $height, $border-radius, $background, $color, $font-size) {
+  width: $width;
+  height: $height;
+  border-radius: $border-radius;
+  background-color: $background;
+  color: $color;
+  font-size: $font-size;
+  border: none;
+  font-family: 'Arial';
+  letter-spacing: 5%;
+  cursor: pointer;
+}

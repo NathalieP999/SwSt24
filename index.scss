@@ -1,0 +1,16 @@
+@import '../node_modules/swiper/swiper.scss';
+
+@import '../node_modules/swiper/swiper-bundle.css';
+@import '_font';
+@import '_mixins';
+@import '_mainPage';
+@import '_catalog';
+@import '_contact';
+@import '_faq';
+
+* {
+  box-sizing: border-box;
+  body {
+    margin: 0;
+  }
+}
